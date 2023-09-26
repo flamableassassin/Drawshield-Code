@@ -1,0 +1,19 @@
+{
+  "name": "drawshield-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@resvg/resvg-wasm": "^2.4.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230914.0",
+    "wrangler": "^3.8.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
