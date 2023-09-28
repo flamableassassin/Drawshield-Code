@@ -29,6 +29,7 @@ jobs:
           **/node_modules/**
           **/examples/**
           **/tests/**
+          **/py/**
           **/README.md
           **/cpulimit.txt
           **/CONTRIBUTORS
