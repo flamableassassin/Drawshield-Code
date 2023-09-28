@@ -17,4 +17,4 @@ jobs:
           head: stable
           ignore_fail: true
           auto_merge: true
-          merge_method: merge
+          merge_method: rebase
