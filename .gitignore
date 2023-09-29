@@ -18,3 +18,5 @@ php.tags
 
 svg/charges/custom
 py/venv/
+node_modules/*
+output/*

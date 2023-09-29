@@ -25,10 +25,8 @@ on:
 #     called "optimize.yml".
 
 # The minimum required permissions
-# The minimum required permissions
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   svgs:
@@ -37,16 +35,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: svg-optimise
       - name: Optimize SVGs
         uses: ericcornelissen/svgo-action@v4
         id: svgo
-      - name: Create Pull Request for optimized SVGs
-        uses: peter-evans/create-pull-request@v5
+      - name: Commit optimizations
+        uses: stefanzweifel/git-auto-commit-action@v4
         if: ${{steps.svgo.outputs.DID_OPTIMIZE}}
         with:
-          commit-message: Optimize ${{steps.svgo.outputs.OPTIMIZED_COUNT}} SVG(s)
-          title: Optimize ${{steps.svgo.outputs.OPTIMIZED_COUNT}} SVG(s)
-          body: _This Pull Request was created automatically_
-          branch: optimize-svgs
+          commit_message: Optimize ${{steps.svgo.outputs.OPTIMIZED_COUNT}} SVG(s)

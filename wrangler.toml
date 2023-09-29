@@ -1,0 +1,6 @@
+name = "drawshield-code"
+compatibility_date = "2023-09-02"
+main = "./worker/index.js"
+
+
+route = { pattern = "s.highlyflammable.tech/drawshield/*", zone_name = "highlyflammable.tech" }
