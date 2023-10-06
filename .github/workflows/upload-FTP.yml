@@ -33,4 +33,3 @@ jobs:
           **/README.md
           **/cpulimit.txt
           **/CONTRIBUTORS
-        protocol: ftps
