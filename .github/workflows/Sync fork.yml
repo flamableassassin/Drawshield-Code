@@ -15,5 +15,6 @@ jobs:
           repo: Drawshield-Code
           base: stable
           head: stable
+          merge_method: rebase
           ignore_fail: true
           auto_merge: true
