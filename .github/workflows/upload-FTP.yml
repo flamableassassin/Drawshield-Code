@@ -1,13 +1,16 @@
 # Modified from  https://github.com/SamKirkland/FTP-Deploy-Action#usage-example
 on: 
   workflow_dispatch:
-  push:
-    branches:
+  pull_request:
+    types: 
+      - closed
+    branches: 
       - stable
 
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
+    if: github.event.pull_request.merged == true
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
