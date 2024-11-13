@@ -18,6 +18,13 @@ This file is part of the DrawShield.net heraldry image creation program
 
 // This is a fess dancetty
 
-include 'fess.inc';
+$num = intval($node->getAttribute('number'));
 
 $node->appendChild(createModifierNode('linetype','dancetty'));
+
+if ( $num > 1 ) {
+    $node->setAttribute('keyterm', 'bar');
+    include 'bar.inc';
+} else {
+    include 'fess.inc';
+}
