@@ -127,7 +127,12 @@ if ($subtype == 'bar' && existModifierWithKeyterm($node,'sinister')) {
     // case 'palet':
     default:
       $bar_width = 200;
-      if ($main_linetype == 'dancetty') $linetype_size = 50;
+      if ($main_linetype == 'dancetty') {
+        if ($layout->shape == 'flag')
+          $linetype_size = 20;
+        else
+          $linetype_size = 50;
+      }
       break;
   }
 
@@ -147,6 +152,7 @@ if ($subtype == 'bar' && existModifierWithKeyterm($node,'sinister')) {
       case 'closet':
       case 'bar':
         $H1 = $bar_width * $height / 1000;
+        $H2 = $H1 / 2;
         $Y1 = (($i+1) * $vSpacing) - $H2;
         $spec = "X{$bar_start}Y{$Y1}A{$bar_length}c{$H1}E{$bar_length}g{$H1}";
         break;
