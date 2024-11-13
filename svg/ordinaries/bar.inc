@@ -127,7 +127,12 @@ if ($subtype == 'bar' && existModifierWithKeyterm($node,'sinister')) {
     // case 'palet':
     default:
       $bar_width = 200;
-      if ($main_linetype == 'dancetty') $linetype_size = 50;
+      if ($main_linetype == 'dancetty') {
+        if ($layout->shape == 'flag')
+          $linetype_size = 20;
+        else
+          $linetype_size = 50;
+      }
       break;
   }
 
