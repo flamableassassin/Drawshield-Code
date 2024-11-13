@@ -137,23 +137,6 @@ reversed=
 dexter=
 inverted=
 
-=ordprefix
-sinister=
-reversed=
-dexter=
-inverted=
-(hause|enhanced)=enhanced
-(abased|abaisse)=abased
-de(bas|hanc)ed=abased
-(rompu|downset)=rompu
-removed=removed
-(debruised|fracted)=fracted
-double (debruised|fracted)=double-fracted
-(eclate|burst|split)=burst
-(disjoint|disjointed|brisse)=disjointed
-(debrui|depres|oppres)sed (with|by|of)=depressed
-false=voided
-pointed=pointed
 
 =colourmods
 (fimbri?ated|edged)=fimbriated

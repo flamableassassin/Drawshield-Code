@@ -438,11 +438,18 @@ function makeOrdinary(DOMElement &$node, $layout)
     $voided = getModifierNodeWithKeyterm($node, 'voided');
     $inverted = existModifierWithKeyterm($node, 'inverted');
     $yshift = '';
-    if (getModifierNodeWithKeyterm($node, 'enhanced')) {
+    if (getModifierNodeWithKeyterm($node, 'enhanced2')) {
         $yshift = $layout->size->height * -0.1666; // Adjust to change movement for enhanced (match in layout.inc)
     }
-    if (getModifierNodeWithKeyterm($node, 'abased')) {
+    if (getModifierNodeWithKeyterm($node, 'abased2')) {
         $yshift = $layout->size->height * 0.1666; // Adjust to change movement for enhanced (match in layout.inc)
+        $shift = ' translate(0,' . $yshift . ') ';
+    }
+    if (getModifierNodeWithKeyterm($node, 'enhanced1')) {
+        $yshift = $layout->size->height * -0.0833; // Adjust to change movement for enhanced (match in layout.inc)
+    }
+    if (getModifierNodeWithKeyterm($node, 'abased1')) {
+        $yshift = $layout->size->height * 0.0833; // Adjust to change movement for enhanced (match in layout.inc)
         $shift = ' translate(0,' . $yshift . ') ';
     }
     $tinc1 = getTinctureNode($node, '1');
