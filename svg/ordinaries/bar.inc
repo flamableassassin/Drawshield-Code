@@ -147,6 +147,7 @@ if ($subtype == 'bar' && existModifierWithKeyterm($node,'sinister')) {
       case 'closet':
       case 'bar':
         $H1 = $bar_width * $height / 1000;
+        $H2 = $H1 / 2;
         $Y1 = (($i+1) * $vSpacing) - $H2;
         $spec = "X{$bar_start}Y{$Y1}A{$bar_length}c{$H1}E{$bar_length}g{$H1}";
         break;
