@@ -146,6 +146,7 @@ if ($subtype == 'bar' && existModifierWithKeyterm($node,'sinister')) {
   $H1 = $bar_width;
   // Adjust bar size for height, if horizontal
   $H2 = $H1 / 2;
+  $chargesOn = [];
   for ( $i = 0; $i < $num; $i++ ) {
     switch ( $subtype ) {
       case 'barrulet':
@@ -155,6 +156,8 @@ if ($subtype == 'bar' && existModifierWithKeyterm($node,'sinister')) {
         $H2 = $H1 / 2;
         $Y1 = (($i+1) * $vSpacing) - $H2;
         $spec = "X{$bar_start}Y{$Y1}A{$bar_length}c{$H1}E{$bar_length}g{$H1}";
+        $chargesOn[] = 'h';
+        $chargesOn[] = '100,' . intval($Y1 + ($bar_width * 0.1)) . ',800,' . intval($bar_width * 0.8);
         break;
       case 'bar-gemel':
         $H1 = $bar_width * $height / 1000;

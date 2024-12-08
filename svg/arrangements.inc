@@ -274,6 +274,15 @@ function placement_combattant($boundingBox, $gap, $flip)
     return array_to_placement($placement_arr);
 }
 
+function charges_on_bars($chargesOn, $num_charges, $rows = null) {
+    $combos = array (
+        "2-1" => "1,*",
+        "2-2" => "1,1",
+        "2-3" => "2,1",
+        "2-2" => "2,2",
+    );
+}
+
 function placement_from_ordinary($ordinary_file, $boundingBox, $layout)
 {
     $node = null;
